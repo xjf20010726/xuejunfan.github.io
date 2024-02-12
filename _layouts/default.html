@@ -13,7 +13,13 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  
   </head>
+  <body>
+    {% include masthead.html %}
+    
+    {% include browser-upgrade.html %}
+  </body>
   <body>
     
     
@@ -29,9 +35,7 @@
 	      <a href="{{ site.semantic-url }}" class="btn"> Semantic Scholar </a>  
       {% endif %}
     </header>
-    {% include masthead.html %}
     
-    {% include browser-upgrade.html %}
     <div id="main" role="main">
       {% include sidebar.html %}
     
