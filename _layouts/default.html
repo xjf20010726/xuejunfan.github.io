@@ -20,7 +20,17 @@
     {% include masthead.html %}
     
     {% include browser-upgrade.html %}
-    
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ site.title }}</h1>
+      <h2 class="project-tagline">{{ site.description }}</h2>
+      {% if site.show_downloads %}
+	      <a href="{{ site.dblp-url }}" class="btn"><i class="ai ai-dblp ai-fw" aria-hidden="true"></i> DBLP </a>
+	      <a href="{{ site.github-url }}" class="btn"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github </a>
+        <a href="{{ site.google-scholar }}" class="btn"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar </a>
+	      <a href="{{ site.orcid-url }}" class="btn"><i class="ai ai-orcid-square ai-fw"></i> ORCID </a>
+	      <a href="{{ site.semantic-url }}" class="btn"> Semantic Scholar </a>  
+      {% endif %}
+    </header>
     
     <div id="main" role="main">
       {% include sidebar.html %}
