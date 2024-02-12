@@ -26,9 +26,9 @@
 	      <a href="{{ site.semantic-url }}" class="btn"> Semantic Scholar </a>  
       {% endif %}
     </header>
-    {% include sidebar.html %}
-    <main id="main" role="main">
-      
+    
+    <main id="content" class="main-content" role="main">
+      {% include sidebar.html %}
       <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
         {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
         <div class="page__inner-wrap">
