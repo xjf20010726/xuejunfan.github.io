@@ -1,5 +1,47 @@
-title: Cayman theme
-description: Cayman is a clean, responsive theme for GitHub Pages.
+title: Junfan Xue | Homepage
+description: Studying at the School of Computer and Communication Engineering, University of Science and Technology Beijing. Focus on polarization SAR ship detection and segmentation.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
+dblp-url: 
+github-url: https://github.com/xjf20010726
+google-scholar: 
+orcid-url: 
+semantic-url: 
+author:
+  name             : "Junfan Xue (薛钧藩)"
+  avatar           : "images/me.jpg"
+  bio              : "USTB student"
+  location         : "Beijing, China"
+  employer         :
+  pubmed           : 
+  googlescholar    : 
+  email            : "M202310688@xs.ustb.edu.cn"
+  researchgate     : 
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : 
+  google_plus      :
+  keybase          :
+  instagram        :
+  impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  lastfm           :
+  linkedin         : # e.g., "linkedin username"
+  dblp             :  # e.g., "https://dblp.org/pid/xx/xxxx.html"
+  orcid            :  # e.g., "https://orcid.org/xxxx"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  steam            :
+  tumblr           :
+  twitter          : "https://twitter.com/JunfanXue"
+  vine             :
+  weibo            : "https://weibo.com/u/5310544578"
+  xing             :
+  youtube          :
+  wikipedia        :
