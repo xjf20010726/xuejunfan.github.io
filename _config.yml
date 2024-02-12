@@ -1,13 +1,22 @@
 title: Junfan Xue | Homepage
 description: Studying at the School of Computer and Communication Engineering, University of Science and Technology Beijing. Focus on polarization SAR ship detection and segmentation.
 show_downloads: true
-google_analytics:
+# google_analytics:
 # theme: jekyll-theme-cayman
 dblp-url: 
 github-url: https://github.com/xjf20010726
 google-scholar: 
 orcid-url: 
 semantic-url: 
+google_scholar_stats_use_cdn : false
+
+# google analytics
+google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
+
+# SEO Related
+google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
+bing_site_verification   :  # get bing_site_verification from https://www.bing.com/webmasters/about
+baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
 author:
   name             : "Junfan Xue (薛钧藩)"
   avatar           : "images/me.jpg"
