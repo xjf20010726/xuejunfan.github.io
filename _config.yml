@@ -54,6 +54,10 @@ author:
   xing             :
   youtube          :
   wikipedia        :
+include:
+  - .htaccess
+  - _pages
+  - files
 # Conversion
 markdown: kramdown
 highlighter: rouge
