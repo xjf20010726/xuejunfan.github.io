@@ -1,10 +1,6 @@
 ---
-permalink: /
 layout: default
 author_profile: true
-redirect_from: 
-  - /index/
-  - /index.html
 ---
 
 
