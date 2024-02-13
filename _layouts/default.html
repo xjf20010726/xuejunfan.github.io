@@ -1,32 +1,66 @@
----
-layout: compress
----
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<link rel="stylesheet" href="assets/css/main.css">
 
-<!doctype html>
-<html lang="en" class="no-js">
   <head>
-    {% include head.html %}
-    {% include custom.html %}
-  </head>
+    <meta charset="UTF-8">
 
+{% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  </head>
   <body>
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <button><div class="navicon"></div></button>
+            <ul class="visible-links">
+              <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#about-me">Homepage</a></li>
+              {% for link in site.data.navigation.main %}
+                <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+              {% endfor %}
+            </ul>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ site.title }}</h1>
       <h2 class="project-tagline">{{ site.description }}</h2>
       {% if site.show_downloads %}
-	      <a href="{{ site.dblp-url }}" class="btn"><i class="ai ai-dblp ai-fw" aria-hidden="true"></i> DBLP </a>
-	      <a href="{{ site.github-url }}" class="btn"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github </a>
+	<a href="{{ site.dblp-url }}" class="btn"> DBLP </a>
+	<a href="{{ site.github-url }}" class="btn"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github </a>
         <a href="{{ site.google-scholar }}" class="btn"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar </a>
-	      <a href="{{ site.orcid-url }}" class="btn"><i class="ai ai-orcid-square ai-fw"></i> ORCID </a>
-	      <a href="{{ site.semantic-url }}" class="btn"> Semantic Scholar </a>  
+	<a href="{{ site.orcid-url }}" class="btn"> ORCID </a>
+	<a href="{{ site.semantic-url }}" class="btn"> Semantic Scholar </a>  
       {% endif %}
     </header>
+
     <div id="main" role="main">
-      {% include sidebar.html %}
-    
+
+      {% if page.author_profile or layout.author_profile or page.sidebar %}
+        <div class="sidebar sticky">
+        {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+        {% if page.sidebar %}
+          {% for s in page.sidebar %}
+            {% if s.image %}
+              <img src= "{{ s.image }}" alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+            {% endif %}
+            {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+            {% if s.text %}{{ s.text | markdownify }}{% endif %}
+          {% endfor %}
+        {% endif %}
+        </div>
+      {% endif %}
+
       <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
         {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
         <div class="page__inner-wrap">
@@ -35,9 +69,7 @@ layout: compress
           </section>
         </div>
       </article>
+      <script src="assets/js/main.min.js"></script>
     </div>
-    <script src="assets/js/main.min.js"></script>
-
-
   </body>
 </html>
