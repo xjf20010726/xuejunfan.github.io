@@ -54,10 +54,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
-include:
-  - .htaccess
-  - _pages
-  - files
+
 exclude:
   - docs
   - google_scholar_crawler
